@@ -1,12 +1,13 @@
 ﻿@model ElectronicStore.Models.Product
 @{
+    Layout = "_Layout";
     ViewData["Title"] = "AddProduct";
 }
 
 <div class="row w-50 m-auto pt-3">
     <div class="col-md-12 d-inline">
         <!-- <form action="" class="d-flex-inline justify-content-center"> -->
-        <form action="" class="">
+        <form asp-action="AddProduct" class="" >
             <div class="form-group">
                 <label for="">Nombre</label>
                 <input type="text" name="" asp-for="Name" class="form-control" placeholder="'Arduino Mega'" aria-describedby="helpId">

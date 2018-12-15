@@ -30,7 +30,8 @@ namespace ElectronicStore.Controllers
         [HttpPost]
         public ViewResult AddProduct(Product producto)
         {
-            return View();
+            Repository.AddProduct(producto);
+            return View("Thanks",producto);
         }
     }
 }

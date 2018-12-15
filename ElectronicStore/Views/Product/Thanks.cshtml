@@ -1,0 +1,19 @@
+﻿@model ElectronicStore.Models.Product
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Thanks";
+}
+
+@if (Model.Price < 100)
+{
+    <div class="alert alert-primary" role="alert">
+        Gracias por registrar el libro
+    </div>
+}
+else
+{
+    <div class="alert alert-danger" role="alert">
+        El libro excede los 100 soles, debe bajar el precio
+    </div>
+}
+
