@@ -1,0 +1,35 @@
+﻿@model ElectronicStore.Models.Product
+@{
+    ViewData["Title"] = "AddProduct";
+}
+
+<div class="row w-50 m-auto pt-3">
+    <div class="col-md-12 d-inline">
+        <!-- <form action="" class="d-flex-inline justify-content-center"> -->
+        <form action="" class="">
+            <div class="form-group">
+                <label for="">Nombre</label>
+                <input type="text" name="" asp-for="Name" class="form-control" placeholder="'Arduino Mega'" aria-describedby="helpId">
+                <small id="helpId" class="text-muted">Ingrese nombre de articulo</small><br><br>
+
+                <label for="">Descripcion</label>
+                <input type="text" name="" asp-for="Description" class="form-control" placeholder="'Modulo hardware de acceso libre'" aria-describedby="helpId">
+                <small id="helpId" class="text-muted">Describa brevemente el producto</small><br><br>
+
+                <label for="">Precio</label>
+                <input type="text" name="" asp-for="Price" class="form-control" placeholder="'S/ 80.00'" aria-describedby="helpId">
+                <small id="helpId" class="text-muted">Ingrese solo el numero</small><br><br>
+
+                <label for="">Categoria</label>
+                <select name="" asp-for="Category" class="form-control">
+                    <option value="uE">Microelectronica</option>
+                    <option value="eAcademica">Electronica de control</option>
+                    <option value="eIndustrial">Electronica industrial</option>
+                    <option value="ePotencia">Electronica de potencia</option>
+                </select><br />
+
+                <button class="btn btn-success" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+</div>
