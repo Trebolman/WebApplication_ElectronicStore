@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ElectronicStore.Models.Product>
+@{
+    ViewData["Title"] = "ListaProductos";
+}
+
+<div class="container">
+    <div class="row">
+        <table class="table table-bordered">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (ElectronicStore.Models.Product producto in Model)
+                {
+                    <tr>
+                        <td>@(producto?.ProductID??0)</td>
+                        <td>@(producto?.Name??"Nombre no establecido")</td>
+                        <td>@(producto?.Description??"Descripcion no establecida")</td>
+                        <td>@(producto?.Price??0)</td>
+                        <td>@(producto?.Category??"Categoria no establecida")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    <p>@($"El precio total de los productos suman: { ViewBag.TotalPrice:c2}") </p>
+
+</div>
+
+</div>

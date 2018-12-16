@@ -33,5 +33,14 @@ namespace ElectronicStore.Controllers
             Repository.AddProduct(producto);
             return View("Thanks",producto);
         }
+
+        [HttpGet]
+        public ViewResult ListaProductos()
+        {
+            //return View(Repository.Responses.Where(b => b.Price > 100)); Libros caros
+            //return View(Repository.Responses.Where(b => b.Price < 100)); Libros baratos
+            ViewBag.TotalPrice = Repository.TotalPrice();
+            return View(Repository.productos);
+        }
     }
 }

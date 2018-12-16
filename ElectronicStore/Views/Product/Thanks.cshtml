@@ -7,13 +7,14 @@
 @if (Model.Price < 100)
 {
     <div class="alert alert-primary" role="alert">
-        Gracias por registrar el libro
+        Gracias por registrar el producto: @Model.Name
     </div>
 }
 else
 {
     <div class="alert alert-danger" role="alert">
-        El libro excede los 100 soles, debe bajar el precio
+        El producto @Model.Name excede los 100 soles, debe bajar el precio
     </div>
 }
-
+    <label class="text-capitalize">Haga click <a class="bg-warning" asp-action="AddProduct">Aquí</a> para añadir un producto mas</label><br />
+    <label class="text-capitalize">Haga click <a class="bg-warning" asp-action="ListaProductos">Aquí</a> si desea ver la lista de productos</label>

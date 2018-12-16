@@ -7,22 +7,22 @@
 <div class="row w-50 m-auto pt-3">
     <div class="col-md-12 d-inline">
         <!-- <form action="" class="d-flex-inline justify-content-center"> -->
-        <form asp-action="AddProduct" class="" >
+        <form asp-action="AddProduct" method="post">
             <div class="form-group">
-                <label for="">Nombre</label>
-                <input type="text" name="" asp-for="Name" class="form-control" placeholder="'Arduino Mega'" aria-describedby="helpId">
+                <label asp-for="Name">Nombre</label>
+                <input type="text" name="Name" asp-for="Name" class="form-control" placeholder="'Arduino Mega'" aria-describedby="helpId">
                 <small id="helpId" class="text-muted">Ingrese nombre de articulo</small><br><br>
 
-                <label for="">Descripcion</label>
-                <input type="text" name="" asp-for="Description" class="form-control" placeholder="'Modulo hardware de acceso libre'" aria-describedby="helpId">
+                <label asp-for="Description">Descripcion</label>
+                <input type="text" name="Description" asp-for="Description"  class="form-control" placeholder="'Modulo hardware de acceso libre'" aria-describedby="helpId">
                 <small id="helpId" class="text-muted">Describa brevemente el producto</small><br><br>
 
-                <label for="">Precio</label>
-                <input type="text" name="" asp-for="Price" class="form-control" placeholder="'S/ 80.00'" aria-describedby="helpId">
+                <label asp-for="Price">Precio</label>
+                <input type="text" name="Price" asp-for="Price" class="form-control" placeholder="'S/ 80.00'" aria-describedby="helpId">
                 <small id="helpId" class="text-muted">Ingrese solo el numero</small><br><br>
 
-                <label for="">Categoria</label>
-                <select name="" asp-for="Category" class="form-control">
+                <label asp-for="Category">Categoria</label>
+                <select name="Category" asp-for="Category" class="form-control">
                     <option value="uE">Microelectronica</option>
                     <option value="eAcademica">Electronica de control</option>
                     <option value="eIndustrial">Electronica industrial</option>
