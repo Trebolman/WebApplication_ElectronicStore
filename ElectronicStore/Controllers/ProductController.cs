@@ -10,37 +10,11 @@ namespace ElectronicStore.Controllers
 {
     public class ProductController : Controller
     {
-        public bool islog = false;
-        public ViewResult Index()
-        {   
-            ViewBag.log = islog ? true : false;
-            return View();
-        }
-
-        public ViewResult Login()
+        private IProductRepository repository;
+        public ProductController(IProductRepository repo)
         {
-            return View();
+            repository = repo;
         }
-
-        public ViewResult AddProduct()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ViewResult AddProduct(Product producto)
-        {
-            Repository.AddProduct(producto);
-            return View("Thanks",producto);
-        }
-
-        [HttpGet]
-        public ViewResult ListaProductos()
-        {
-            //return View(Repository.Responses.Where(b => b.Price > 100)); Libros caros
-            //return View(Repository.Responses.Where(b => b.Price < 100)); Libros baratos
-            ViewBag.TotalPrice = Repository.TotalPrice();
-            return View(Repository.productos);
-        }
+        public ViewResult List() => View(repository.Productos);
     }
 }
